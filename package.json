@@ -1,0 +1,22 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "youtube clone",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choice91/youtube-clone.git"
+  },
+  "author": "LST",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/choice91/youtube-clone/issues"
+  },
+  "homepage": "https://github.com/choice91/youtube-clone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
