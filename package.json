@@ -4,7 +4,7 @@
   "description": "youtube clone",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "nodemon --exec babel-node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "homepage": "https://github.com/choice91/youtube-clone#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "nodemon": "^2.0.12"
   }
 }
