@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import path from "path";
 // routers
 import globalRouter from "./routes/globalRouter";
 import videoRouter from "./routes/videoRouter";
@@ -9,6 +10,10 @@ const PORT = 4000;
 
 const app = express();
 const logger = morgan("dev");
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
 app.use(logger);
 
 app.use("/", globalRouter);
