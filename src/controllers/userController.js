@@ -10,18 +10,14 @@ export const remove = (req, res) => {
   return res.send("Delete");
 };
 
-// const handleHome = (req, res) => {
-//   return res.send("Home");
-// };
+export const login = (req, res) => {
+  return res.send("Login");
+};
 
-// const handleJoin = (req, res) => {
-//   return res.send("Home Join");
-// };
+export const logout = (req, res) => {
+  return res.send("Logout");
+};
 
-// const handleEditUser = (req, res) => {
-//   return res.send("Edit User");
-// };
-
-// const handleDelete = (req, res) => {
-//   return res.send("Delete Users");
-// };
+export const see = (req, res) => {
+  return res.send("See User");
+};
