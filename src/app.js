@@ -3,6 +3,7 @@ import morgan from "morgan";
 import path from "path";
 // db
 import "./db";
+import "./models/video";
 // routers
 import globalRouter from "./routes/globalRouter";
 import videoRouter from "./routes/videoRouter";
