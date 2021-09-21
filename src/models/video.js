@@ -12,6 +12,20 @@ const videoSchema = new mongoose.Schema({
   },
 });
 
+// Static
+videoSchema.static("formatHashtags", function (hashtags) {
+  return hashtags
+    .split(",")
+    .map((word) => (word.startsWith("#") ? word : `#${word}`));
+});
+
+// Middleware
+// videoSchema.pre("save", async function () {
+//   this.hashtags = this.hashtags[0]
+//     .split(",")
+//     .map((word) => (word.startsWith("#") ? word : `#${word}`));
+// });
+
 // Model
 const Video = mongoose.model("Video", videoSchema);
 
