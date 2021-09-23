@@ -47,6 +47,7 @@ export const getLogin = (req, res) => {
 export const postLogin = async (req, res) => {
   const { username, password } = req.body;
   const pageTitle = "Login";
+
   // 사용자이름 확인
   const user = await User.findOne({ username });
   if (!user) {
@@ -55,6 +56,7 @@ export const postLogin = async (req, res) => {
       errorMessage: "An account with this username does not exists.",
     });
   }
+
   // 비밀번호 확인
   const ok = await bcrypt.compare(password, user.password);
   if (!ok) {
@@ -63,7 +65,9 @@ export const postLogin = async (req, res) => {
       errorMessage: "Wrong password",
     });
   }
-  console.log("LOG USER IN! COMING SOON");
+  req.session.loggedIn = true;
+  req.session.user = user;
+
   return res.redirect("/");
 };
 
