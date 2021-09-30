@@ -1,6 +1,4 @@
 .search__form {
-  max-width: 420px;
-  margin: 0 auto;
   margin-bottom: 60px;
   display: flex;
   align-items: center;
@@ -27,4 +25,11 @@
     text-align: center;
     cursor: pointer;
   }
+}
+
+input[type="submit"] {
+  padding: 12px 20px;
+  background-color: $red;
+  text-align: center;
+  cursor: pointer;
 }
