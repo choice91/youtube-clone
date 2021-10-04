@@ -3,6 +3,7 @@ import morgan from "morgan";
 import path from "path";
 import session from "express-session";
 import MongoStore from "connect-mongo";
+import flash from "express-flash";
 // routers
 import rootRouter from "./routes/rootRouter";
 import videoRouter from "./routes/videoRouter";
@@ -27,6 +28,7 @@ app.use(
     store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
   })
 );
+app.use(flash());
 app.use(localsMiddleware);
 
 app.use("/uploads", express.static("uploads"));
